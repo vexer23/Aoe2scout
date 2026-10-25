@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1b1410">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="style.css">
+<title>AoE2 Scout</title>
+</head>
+<body>
+<main>
+  <h1>AoE2 Scout</h1>
+  <button id="scoutBtn" class="big">Scout match</button>
+  <div id="status" class="status" hidden></div>
+
+  <section id="results" hidden>
+    <p id="mapInfo" class="mapinfo"></p>
+    <h2>Opponents</h2>
+    <ul id="opps"></ul>
+    <h2 id="mateHead">Teammates</h2>
+    <ul id="mates"></ul>
+  </section>
+
+  <details class="settings">
+    <summary>Settings</summary>
+    <label>Profile ID
+      <input id="profileId" inputmode="numeric" autocomplete="off" placeholder="6560794">
+    </label>
+    <label>API/proxy URL (optional)
+      <input id="apiBase" autocomplete="off" placeholder="https://data.aoe2companion.com/api">
+    </label>
+    <button id="saveSettings">Save</button>
+    <pre id="diag"></pre>
+  </details>
+  <p class="foot">Unofficial. Data from aoe2companion. Lines are estimates from civ, map and your opponents' last 10 Team RM games.</p>
+</main>
+<script src="civs.js"></script>
+<script src="logic.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
